@@ -5,7 +5,7 @@ const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
 module.exports = buildModule("TestingModule", (m) => {
   // Deploy contract Testing
-  const testingContract = m.contract("Testing", []);
+  const testingContract = m.contract("CertificateRegistry", []);
 
   // Return contract instance
   return { testingContract };
