@@ -6,6 +6,7 @@ contract CertificateRegistry {
     struct Certificate {
         string id;
         string certificateTitle;
+        string cid;
         string expiryDate;
         string issueDate;
         address issuerAddress;
@@ -45,6 +46,7 @@ contract CertificateRegistry {
         string memory _certificateTitle,
         string memory _expiryDate,
         string memory _issueDate,
+        string memory _cid,
         string memory _issuerName,
         string memory _recipientName,
         address _targetAddress
@@ -59,6 +61,7 @@ contract CertificateRegistry {
             certificateTitle: _certificateTitle,
             expiryDate: _expiryDate,
             issueDate: _issueDate,
+            cid : _cid,
             issuerAddress: msg.sender,
             issuerName: _issuerName,
             recipientName: _recipientName,
